@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ec03f36a-645f-4b21-8412-07fa5c1d4bdc" name="Houk@HOUK-PC 2012-10-21 15:10:12" runUser="Houk-PC\Houk" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="0336a058-8cf4-4861-a347-34fe88648fbc">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Houk_HOUK-PC 2012-10-21 15_10_12">
+      <DeploymentItem filename="C:\Users\Houk\Documents\Visual Studio 2010\Projects\Connect-Three\Connect-Three\bin\Debug\Connect-Three.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-21T15:10:12.8060118-07:00" queuing="2012-10-21T15:10:13.9890795-07:00" start="2012-10-21T15:10:14.0950855-07:00" finish="2012-10-21T15:10:14.7991258-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ToStringTest" storage="c:\users\houk\documents\visual studio 2010\projects\connect-three\connect-three-test\bin\debug\connect-three-test.dll" id="4358041c-f667-ee03-6178-0739f8888343">
+      <Execution id="2b1dc0b1-f76f-4cb5-b574-f1f8f3b7a246" />
+      <TestMethod codeBase="C:/Users/Houk/Documents/Visual Studio 2010/Projects/Connect-Three/Connect-Three-Test/bin/Debug/Connect-Three-Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Connect_Three_Test.BoardTest, Connect-Three-Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ToStringTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="4358041c-f667-ee03-6178-0739f8888343" executionId="2b1dc0b1-f76f-4cb5-b574-f1f8f3b7a246" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2b1dc0b1-f76f-4cb5-b574-f1f8f3b7a246" testId="4358041c-f667-ee03-6178-0739f8888343" testName="ToStringTest" computerName="HOUK-PC" duration="00:00:00.1258886" startTime="2012-10-21T15:10:14.1490886-07:00" endTime="2012-10-21T15:10:14.7521231-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b1dc0b1-f76f-4cb5-b574-f1f8f3b7a246">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;. . . . 
+. . . . 
+. . . . 
+. . . . &gt;. Actual:&lt;78787878
+78787878
+78787878
+&gt;. </Message>
+          <StackTrace>   at Connect_Three_Test.BoardTest.ToStringTest() in C:\Users\Houk\Documents\Visual Studio 2010\Projects\Connect-Three\Connect-Three-Test\BoardTest.cs:line 80
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

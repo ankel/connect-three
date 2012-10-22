@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f0f4ffaf-8bd6-4e85-b3b5-9125fd88aa2a" name="Houk@HOUK-PC 2012-10-21 20:54:31" runUser="Houk-PC\Houk" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="0336a058-8cf4-4861-a347-34fe88648fbc">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Houk_HOUK-PC 2012-10-21 20_54_31">
+      <DeploymentItem filename="C:\Users\Houk\Documents\Visual Studio 2010\Projects\Connect-Three\Connect-Three\bin\Debug\Connect-Three.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-21T20:54:31.2746086-07:00" queuing="2012-10-21T20:54:31.4706198-07:00" start="2012-10-21T20:54:31.5176225-07:00" finish="2012-10-21T20:54:32.0406524-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="2" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ScoreTest" storage="c:\users\houk\documents\visual studio 2010\projects\connect-three\connect-three-test\bin\debug\connect-three-test.dll" id="b86456e7-7b75-427c-e856-997df237c5b3">
+      <Execution id="d1e20abe-a024-40b1-abc2-6b6bb69374ea" />
+      <TestMethod codeBase="C:/Users/Houk/Documents/Visual Studio 2010/Projects/Connect-Three/Connect-Three-Test/bin/Debug/Connect-Three-Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Connect_Three_Test.BoardTest, Connect-Three-Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ScoreTest" />
+    </UnitTest>
+    <UnitTest name="DropTest" storage="c:\users\houk\documents\visual studio 2010\projects\connect-three\connect-three-test\bin\debug\connect-three-test.dll" id="e951ff65-ad89-36ee-f00f-6d8818f4d5bf">
+      <Execution id="a2d26470-728b-4d60-8988-fc36058a2e5d" />
+      <TestMethod codeBase="C:/Users/Houk/Documents/Visual Studio 2010/Projects/Connect-Three/Connect-Three-Test/bin/Debug/Connect-Three-Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Connect_Three_Test.BoardTest, Connect-Three-Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DropTest" />
+    </UnitTest>
+    <UnitTest name="ToStringTest" storage="c:\users\houk\documents\visual studio 2010\projects\connect-three\connect-three-test\bin\debug\connect-three-test.dll" id="4358041c-f667-ee03-6178-0739f8888343">
+      <Execution id="a8ad1e5e-2413-4c77-bfa6-eee2f5a60bc6" />
+      <TestMethod codeBase="C:/Users/Houk/Documents/Visual Studio 2010/Projects/Connect-Three/Connect-Three-Test/bin/Debug/Connect-Three-Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Connect_Three_Test.BoardTest, Connect-Three-Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ToStringTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="4358041c-f667-ee03-6178-0739f8888343" executionId="a8ad1e5e-2413-4c77-bfa6-eee2f5a60bc6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b86456e7-7b75-427c-e856-997df237c5b3" executionId="d1e20abe-a024-40b1-abc2-6b6bb69374ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e951ff65-ad89-36ee-f00f-6d8818f4d5bf" executionId="a2d26470-728b-4d60-8988-fc36058a2e5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a8ad1e5e-2413-4c77-bfa6-eee2f5a60bc6" testId="4358041c-f667-ee03-6178-0739f8888343" testName="ToStringTest" computerName="HOUK-PC" duration="00:00:00.0300624" startTime="2012-10-21T20:54:31.5586249-07:00" endTime="2012-10-21T20:54:31.9566476-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8ad1e5e-2413-4c77-bfa6-eee2f5a60bc6">
+    </UnitTestResult>
+    <UnitTestResult executionId="d1e20abe-a024-40b1-abc2-6b6bb69374ea" testId="b86456e7-7b75-427c-e856-997df237c5b3" testName="ScoreTest" computerName="HOUK-PC" duration="00:00:00.0031514" startTime="2012-10-21T20:54:31.9606478-07:00" endTime="2012-10-21T20:54:31.9676482-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1e20abe-a024-40b1-abc2-6b6bb69374ea">
+    </UnitTestResult>
+    <UnitTestResult executionId="a2d26470-728b-4d60-8988-fc36058a2e5d" testId="e951ff65-ad89-36ee-f00f-6d8818f4d5bf" testName="DropTest" computerName="HOUK-PC" duration="00:00:00.0213553" startTime="2012-10-21T20:54:31.9696484-07:00" endTime="2012-10-21T20:54:31.9936497-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2d26470-728b-4d60-8988-fc36058a2e5d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;.&gt;. Actual:&lt;a&gt;. </Message>
+          <StackTrace>   at Connect_Three_Test.BoardTest.DropTest() in C:\Users\Houk\Documents\Visual Studio 2010\Projects\Connect-Three\Connect-Three-Test\BoardTest.cs:line 218
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="48f37976-18e6-41c4-b2d4-58624f7cb8b0" name="Houk@HOUK-PC 2012-10-21 20:08:34" runUser="Houk-PC\Houk" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="0336a058-8cf4-4861-a347-34fe88648fbc">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Houk_HOUK-PC 2012-10-21 20_08_34">
+      <DeploymentItem filename="C:\Users\Houk\Documents\Visual Studio 2010\Projects\Connect-Three\Connect-Three\bin\Debug\Connect-Three.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-10-21T20:08:34.6829406-07:00" queuing="2012-10-21T20:08:34.7249430-07:00" start="2012-10-21T20:08:34.7339435-07:00" finish="2012-10-21T20:08:35.1049647-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ScoreTest" storage="c:\users\houk\documents\visual studio 2010\projects\connect-three\connect-three-test\bin\debug\connect-three-test.dll" id="b86456e7-7b75-427c-e856-997df237c5b3">
+      <Execution id="526edb8e-0e1f-476a-978d-05b24f10149b" />
+      <TestMethod codeBase="C:/Users/Houk/Documents/Visual Studio 2010/Projects/Connect-Three/Connect-Three-Test/bin/Debug/Connect-Three-Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Connect_Three_Test.BoardTest, Connect-Three-Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ScoreTest" />
+    </UnitTest>
+    <UnitTest name="ToStringTest" storage="c:\users\houk\documents\visual studio 2010\projects\connect-three\connect-three-test\bin\debug\connect-three-test.dll" id="4358041c-f667-ee03-6178-0739f8888343">
+      <Execution id="71a4a512-0ac8-4243-9f81-49ec32b48a17" />
+      <TestMethod codeBase="C:/Users/Houk/Documents/Visual Studio 2010/Projects/Connect-Three/Connect-Three-Test/bin/Debug/Connect-Three-Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Connect_Three_Test.BoardTest, Connect-Three-Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ToStringTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="4358041c-f667-ee03-6178-0739f8888343" executionId="71a4a512-0ac8-4243-9f81-49ec32b48a17" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b86456e7-7b75-427c-e856-997df237c5b3" executionId="526edb8e-0e1f-476a-978d-05b24f10149b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="71a4a512-0ac8-4243-9f81-49ec32b48a17" testId="4358041c-f667-ee03-6178-0739f8888343" testName="ToStringTest" computerName="HOUK-PC" duration="00:00:00.0432150" startTime="2012-10-21T20:08:34.7369437-07:00" endTime="2012-10-21T20:08:35.0739629-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71a4a512-0ac8-4243-9f81-49ec32b48a17">
+    </UnitTestResult>
+    <UnitTestResult executionId="526edb8e-0e1f-476a-978d-05b24f10149b" testId="b86456e7-7b75-427c-e856-997df237c5b3" testName="ScoreTest" computerName="HOUK-PC" duration="00:00:00.0029603" startTime="2012-10-21T20:08:35.0759631-07:00" endTime="2012-10-21T20:08:35.0829635-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="526edb8e-0e1f-476a-978d-05b24f10149b">
+    </UnitTestResult>
+  </Results>
+</TestRun>
