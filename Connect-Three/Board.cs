@@ -42,6 +42,9 @@ namespace Connect_Three
     class Board
     {
         public char[,] board;
+        public static const char Empty = '.';
+        public static const int Win = int.MaxValue / 2;
+        public static const int Lose = -(int.MaxValue / 2);
 
         #region 2-in-a-row hard code
         public static Tuple<Point, Point>[] duplet = 
@@ -101,6 +104,7 @@ namespace Connect_Three
             };
         #endregion
 
+        #region Generate 2-in-a-row hardcode
         public static void GenerateDuplets()
         {
             int[,] board = new int[4, 3];
@@ -183,7 +187,9 @@ namespace Connect_Three
 
             Console.ReadLine();
         }
+        #endregion
 
+        #region Generate 3-in-a-row hardcode
         public static void GenerateTriplets()
         {
             int[,] board = new int[4, 3];
@@ -254,6 +260,7 @@ namespace Connect_Three
 
             Console.ReadLine();
         }
+        #endregion
 
         public Board()
         {
@@ -262,7 +269,7 @@ namespace Connect_Three
             {
                 for (int j = 0; j < 3; ++j)
                 {
-                    board[i, j] = '.';
+                    board[i, j] = Empty;
                 }
             }
         }
@@ -282,16 +289,30 @@ namespace Connect_Three
             return str;
         }
 
-        public int Score(char side)
+        /// <summary>
+        /// Grade a board based on whether it has 3-in-a-row or not, if being used as a heuristic function (with heuristic flag)
+        /// then count all 2-in-a-row's and return as result
+        /// </summary>
+        /// <param name="side">what side is playing</param>
+        /// <param name="heuristic">true if being used as a heuristic function, otherwise false</param>
+        /// <returns>int.max / 2 if 'side' won, - (int.max / 2) if 'side' lost. If being used as heuristic, return the number of 2-in-a-row's</returns>
+        public int Score(char side, bool heuristic)
         {
             //check for winning state
             foreach (var a in triplet)
             {
                 if (side == ReadCell(a.Item1) && side == ReadCell(a.Item2) && side == ReadCell(a.Item3))
                 {
-                    return (int.MaxValue / 2);
+                    return Win;
                 }
+                if (ReadCell(a.Item1) != side && ReadCell(a.Item1) != Empty &&
+                    ReadCell(a.Item2) != side && ReadCell(a.Item2) != Empty &&
+                    ReadCell(a.Item3) != side && ReadCell(a.Item3) != Empty)
+                    return Lose;
             }
+
+            if (!heuristic)
+                return 0;
 
             //no winning state, check for all 2-in-a-row's
             int score = 0;
@@ -306,6 +327,19 @@ namespace Connect_Three
             return score;
         }
 
+        public bool IsFull()
+        {
+            for (int i = 0; i < 4; ++i)
+            {
+                for (int j = 0; j < 3; ++j)
+                {
+                    if (board[i, j] == Empty)
+                        return false;
+                }
+            }
+            return true;
+        }
+
         private char ReadCell(Point point)
         {
             return board[point.X, point.Y];
@@ -315,18 +349,7 @@ namespace Connect_Three
         {
             if (col < 0 || col >= 3)
             {
-                throw new ArgumentOutOfRangeException("position can only be 0, 1, or 2");
-            }
-
-            int cnt = 0;
-            for (int j = 0; j < 3; ++j)
-            {
-                cnt += board[3, j] == '.' ? 0 : 1;
-            }
-
-            if (cnt >= 3)
-            {
-                return false;
+                throw new ArgumentOutOfRangeException("col can only be 0, 1, or 2");
             }
 
             if (board[3, col] != '.')
