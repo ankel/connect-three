@@ -96,9 +96,9 @@ namespace Connect_Three_Test
                         { '.', '.', '.' }, 
                         { '.', '.', '.' } };
                 char side = 'a'; // TODO: Initialize to an appropriate value
-                int expected = int.MaxValue / 2; // TODO: Initialize to an appropriate value
+                int expected = Board.Win; // TODO: Initialize to an appropriate value
                 int actual;
-                actual = target.Score(side);
+                actual = target.Score(side, false);
                 Assert.AreEqual(expected, actual);
                 //Assert.Inconclusive("Verify the correctness of this test method.");
             }
@@ -110,10 +110,10 @@ namespace Connect_Three_Test
                         { '.', 'a', '.' }, 
                         { '.', '.', 'a' }, 
                         { '.', '.', '.' } };
-                char side = 'a'; // TODO: Initialize to an appropriate value
-                int expected = int.MaxValue / 2; // TODO: Initialize to an appropriate value
+                char side = 'b'; // TODO: Initialize to an appropriate value
+                int expected = Board.Lose; // TODO: Initialize to an appropriate value
                 int actual;
-                actual = target.Score(side);
+                actual = target.Score(side, false);
                 Assert.AreEqual(expected, actual);
                 //Assert.Inconclusive("Verify the correctness of this test method.");
             }
@@ -126,9 +126,9 @@ namespace Connect_Three_Test
                         { 'a', '.', '.' }, 
                         { '.', '.', '.' } };
                 char side = 'a'; // TODO: Initialize to an appropriate value
-                int expected = int.MaxValue / 2; // TODO: Initialize to an appropriate value
+                int expected = Board.Win; // TODO: Initialize to an appropriate value
                 int actual;
-                actual = target.Score(side);
+                actual = target.Score(side, false);
                 Assert.AreEqual(expected, actual);
                 //Assert.Inconclusive("Verify the correctness of this test method.");
             }
@@ -140,10 +140,10 @@ namespace Connect_Three_Test
                         { '.', 'a', '.' }, 
                         { 'a', '.', '.' }, 
                         { '.', '.', '.' } };
-                char side = 'a'; // TODO: Initialize to an appropriate value
-                int expected = int.MaxValue / 2; // TODO: Initialize to an appropriate value
+                char side = 'b'; // TODO: Initialize to an appropriate value
+                int expected = Board.Lose; // TODO: Initialize to an appropriate value
                 int actual;
-                actual = target.Score(side);
+                actual = target.Score(side, false);
                 Assert.AreEqual(expected, actual);
                 //Assert.Inconclusive("Verify the correctness of this test method.");
             }
@@ -158,7 +158,7 @@ namespace Connect_Three_Test
                 char side = 'a'; // TODO: Initialize to an appropriate value
                 int expected = 5; // TODO: Initialize to an appropriate value
                 int actual;
-                actual = target.Score(side);
+                actual = target.Score(side, true);
                 Assert.AreEqual(expected, actual);
                 //Assert.Inconclusive("Verify the correctness of this test method.");
             }

@@ -5,3 +5,6 @@ C:\Users\Houk\Documents\Visual Studio 2010\Projects\Connect-Three\Connect-Three\
 C:\Users\Houk\Documents\Visual Studio 2010\Projects\Connect-Three\Connect-Three\obj\x86\Debug\Connect-Three.pdb
 N:\AI\Connect-Three\Connect-Three\obj\x86\Debug\Connect-Three.exe
 N:\AI\Connect-Three\Connect-Three\obj\x86\Debug\Connect-Three.pdb
+N:\AI\Connect-Three\Connect-Three\obj\x86\Debug\ResolveAssemblyReference.cache
+N:\AI\Connect-Three\Connect-Three\bin\Debug\Connect-Three.exe
+N:\AI\Connect-Three\Connect-Three\bin\Debug\Connect-Three.pdb

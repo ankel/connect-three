@@ -42,9 +42,11 @@ namespace Connect_Three
     class Board
     {
         public char[,] board;
-        public static const char Empty = '.';
-        public static const int Win = int.MaxValue / 2;
-        public static const int Lose = -(int.MaxValue / 2);
+        //CharStack[] theBoard;
+        public int cnt;
+        public const char Empty = '.';
+        public const int Win = 100;
+        public const int Lose = -100;
 
         #region 2-in-a-row hard code
         public static Tuple<Point, Point>[] duplet = 
@@ -272,6 +274,7 @@ namespace Connect_Three
                     board[i, j] = Empty;
                 }
             }
+            cnt = 0;
         }
 
         public override string ToString()
@@ -327,17 +330,28 @@ namespace Connect_Three
             return score;
         }
 
+        /// <summary>
+        /// Check if the board is full or not
+        /// </summary>
+        /// <returns>true if full, false if not</returns>
         public bool IsFull()
         {
-            for (int i = 0; i < 4; ++i)
+            for (int j = 0; j < 3; ++j)
             {
-                for (int j = 0; j < 3; ++j)
-                {
-                    if (board[i, j] == Empty)
-                        return false;
-                }
+                if (board[3, j] == Empty)
+                    return false;
             }
             return true;
+        }
+
+        /// <summary>
+        /// Check if a specified column is full or not
+        /// </summary>
+        /// <param name="col">column to check</param>
+        /// <returns>true if 'col' is full, otherwise false</returns>
+        public bool IsFull(int col)
+        {
+            return board[3, col] != Empty;
         }
 
         private char ReadCell(Point point)
@@ -345,28 +359,42 @@ namespace Connect_Three
             return board[point.X, point.Y];
         }
 
+        /// <summary>
+        /// Drop a ball color 'side' into the board at collumn 'col
+        /// </summary>
+        /// <param name="col">column to drop the ball into</param>
+        /// <param name="side">color of the ball to drop</param>
+        /// <returns>true if successfully dropped, otherwise false</returns>
         public bool Drop(int col, char side)
         {
-            if (col < 0 || col >= 3)
-            {
-                throw new ArgumentOutOfRangeException("col can only be 0, 1, or 2");
-            }
-
-            if (board[3, col] != '.')
-            {
+            if (IsFull(col))
                 return false;
-            }
 
             for (int i = 0; i < 4; ++i)
             {
-                if (board[i, col] == '.')
+                if (board[i, col] == Empty)
                 {
                     board[i, col] = side;
+                    cnt++;
                     return true;
                 }
             }
 
             return false;
+        }
+
+
+        public void Pop(int col)
+        {
+            for (int i = 3; i >= 0; --i)
+            {
+                if (board[i, col] != Empty)
+                {
+                    board[i, col] = Empty;
+                    cnt--;
+                    return;
+                }
+            }
         }
     }
 }
