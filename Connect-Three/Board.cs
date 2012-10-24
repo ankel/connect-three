@@ -289,6 +289,7 @@ namespace Connect_Three
                 }
                 str += Environment.NewLine;
             }
+            str += Environment.NewLine + "Notice: game is played top-down, not bottom-up. I'll try to format it better if I can...";
             return str;
         }
 

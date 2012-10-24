@@ -109,7 +109,7 @@ namespace Connect_Three
 
         private static void MakeAMove(char side, Board gameBoard)
         {
-            int col = MakeAMoveHelper(side, gameBoard);
+            int col = MakeAMoveHelper(side, side, gameBoard);
             //while (gameBoard.IsFull(col))
             //{
             //    ++col;
@@ -119,7 +119,7 @@ namespace Connect_Three
             //System.Diagnostics.Debug.WriteLine(gameBoard.ToString());
         }
 
-        private static int MakeAMoveHelper(char side, Board gameBoard)
+        private static int MakeAMoveHelper(char side, char playAs, Board gameBoard)
         {
             int score = gameBoard.Score(side, false);
             if (score != 0)
@@ -135,14 +135,14 @@ namespace Connect_Three
             List<int> scores = new List<int>(3);
             for (int i = 0; i < 3; ++i)
             {
-                scores.Add();
+                scores.Add(Board.Lose);
             }
             for (int i = 0; i < 3; ++i)
             {
                 if (!gameBoard.IsFull(i))
                 {
                     gameBoard.Drop(i, side);
-                    scores[i] = (-(MakeAMoveHelper(side == Side1 ? Side2 : Side1, gameBoard)));
+                    scores[i] = (-(MakeAMoveHelper(side, side == Side1 ? Side2 : Side1, gameBoard)));
                     gameBoard.Pop(i);
                 }
             }
