@@ -5,32 +5,6 @@ using System.Text;
 
 namespace Connect_Three
 {
-    class DrawnGame : Exception
-    {
-        public DrawnGame()
-            : base()
-        {
-        }
-
-        public DrawnGame(string str)
-            : base(str)
-        {
-        }
-    }
-
-    class WonGame : Exception
-    {
-        public WonGame()
-            : base()
-        {
-        }
-
-        public WonGame(string str)
-            : base()
-        {
-        }
-    }
-
     class Program
     {
         const char Side1 = 'a';
